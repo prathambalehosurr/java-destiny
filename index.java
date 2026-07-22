@@ -2,7 +2,7 @@ public class index {
     public static void main(String[] args) {
         String str = "Hello, World!";
         
-        int index = str.indexOf('W');
+        int index = str.indexOf('l');
         System.out.println("Index of 'W': " + index);
 
         char ch = str.charAt(7);
