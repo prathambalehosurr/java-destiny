@@ -15,7 +15,7 @@ class Student extends Teacher {
     int marks;
 
     public Student(String teacherName, String studentName, int marks) {
-        super(teacherName); // Call the constructor of the parent class
+        super(teacherName); 
         this.studentName = studentName;
         this.marks = marks;
     }
@@ -39,10 +39,11 @@ class Student extends Teacher {
     }
 }
 
-class Principal {
+class Principal extends Student {
     String principalName;
 
-    public Principal(String principalName) {
+    public Principal(String teacherName, String studentName, int marks, String principalName) {
+        super(teacherName, studentName, marks); 
         this.principalName = principalName;
     }
 
@@ -53,12 +54,10 @@ class Principal {
 
 public class multi {
     public static void main(String[] args) {
-        Principal principal = new Principal("Dr. Sharma");
+        Principal principal = new Principal("Mr. Pratham", "Sumeeth", 85, "Dr. Sharma");
 
-        Student student = new Student("Mr. Pratham", "Sumeeth", 85);
-
-        principal.displayPrincipal();
-        student.displayTeacher();
-        student.displayStudent();
+        principal.displayPrincipal(); 
+        principal.displayTeacher();  
+        principal.displayStudent();   
     }
 }
