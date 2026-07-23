@@ -26,7 +26,6 @@ class Student extends Teacher {
         System.out.println("Grade: " + calculateGrade());
     }
 
-    // Method to calculate grade based on marks
     public String calculateGrade() {
         if (marks >= 90) {
             return "A";
